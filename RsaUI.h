@@ -1,7 +1,6 @@
 #pragma once
 
 #include <iostream>
-#include <string>
 using std::cout;
 using std::cin;
 using std::endl;
@@ -16,21 +15,21 @@ public:
 	~RsaUI();
 	char getChoice();
 	void setChoice();
-	uint64_t getExponent();
+	unsigned long long getExponent();
 	void setExponent();
-	uint64_t getN();
+	unsigned long long getN();
 	void setN();
-	uint64_t getPlainText();
+	unsigned long long getPlainText();
 	void setPlainText();
-	uint64_t getCipherText();
+	unsigned long long getCipherText();
 	void setCipherText();
 
 private:
 	char choice;
-	uint64_t exponent;
-	uint64_t n;
-	uint64_t plaintext;
-	uint64_t ciphertext;
+	unsigned long long exponent;
+	unsigned long long n;
+	unsigned long long plaintext;
+	unsigned long long ciphertext;
 };
 #endif
 //change to include libRSA
