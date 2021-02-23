@@ -2,7 +2,7 @@
 //
 
 #include <iostream>
-#include "RsaUI.cpp"
+#include "RsaUI.h"
 
 uint64_t FindD(uint64_t exp, uint64_t mod);
 
