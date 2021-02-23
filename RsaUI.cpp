@@ -11,7 +11,11 @@ RsaUI::RsaUI()
 
 RsaUI::~RsaUI()
 {
-
+	choice = '\0';
+	exponent = 0;
+	n = 0;
+	plaintext = 0;
+	ciphertext = 0;
 }
 
 char RsaUI::getChoice()
@@ -28,6 +32,7 @@ void RsaUI::setChoice()
 		cout << "Improper input, try again: " << endl;
 		cin >> choice;
 	}
+	choice = tolower(choice);
 }
 
 uint64_t RsaUI::getExponent()
@@ -48,6 +53,8 @@ uint64_t RsaUI::getN()
 
 void RsaUI::setN()
 {
+	cout << "Enter key N: " << endl;
+	cin >> n;
 }
 
 uint64_t RsaUI::getPlainText()
@@ -57,6 +64,8 @@ uint64_t RsaUI::getPlainText()
 
 void RsaUI::setPlainText()
 {
+	cout << "Enter a number for plaintext: " << endl;
+	cin >> plaintext;
 }
 
 uint64_t RsaUI::getCipherText()
@@ -66,4 +75,6 @@ uint64_t RsaUI::getCipherText()
 
 void RsaUI::setCipherText()
 {
+	cout << "Enter a number for ciphertext: " << endl;
+	cin >> ciphertext;
 }
