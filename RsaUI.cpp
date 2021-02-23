@@ -35,7 +35,7 @@ void RsaUI::setChoice()
 	choice = tolower(choice);
 }
 
-uint64_t RsaUI::getExponent()
+unsigned long long RsaUI::getExponent()
 {
 	return exponent;
 }
@@ -46,7 +46,7 @@ void RsaUI::setExponent()
 	cin >> exponent;
 }
 
-uint64_t RsaUI::getN()
+unsigned long long RsaUI::getN()
 {
 	return n;
 }
@@ -57,7 +57,7 @@ void RsaUI::setN()
 	cin >> n;
 }
 
-uint64_t RsaUI::getPlainText()
+unsigned long long RsaUI::getPlainText()
 {
 	return plaintext;
 }
@@ -68,7 +68,7 @@ void RsaUI::setPlainText()
 	cin >> plaintext;
 }
 
-uint64_t RsaUI::getCipherText()
+unsigned long long RsaUI::getCipherText()
 {
 	return ciphertext;
 }
