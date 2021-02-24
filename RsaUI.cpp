@@ -1,4 +1,3 @@
-#include <ctype.h>
 #include "RsaUI.h"
 
 RsaUI::RsaUI()
@@ -7,7 +6,6 @@ RsaUI::RsaUI()
 	exponent = 0;
 	n = 0;
 	text = 0;
-	//ciphertext = 0;
 }
 
 RsaUI::~RsaUI()
@@ -16,7 +14,6 @@ RsaUI::~RsaUI()
 	exponent = 0;
 	n = 0;
 	text = 0;
-	//ciphertext = 0;
 }
 
 const char RsaUI::getChoice()
@@ -70,17 +67,6 @@ void RsaUI::setExponent()
 	cout << "Enter key " << choice << ": " << endl;
 	cin >> exponent;
 }
-
-/*unsigned long long RsaUI::getN()
-{
-	return n;
-}*/
-
-/*void RsaUI::setN()
-{
-	cout << "Enter key N: " << endl;
-	cin >> n;
-}*/
 
 
 const void RsaUI::askKeys(unsigned long long e, unsigned long long n, unsigned long long d)
