@@ -25,15 +25,13 @@ void LibRSA::chooseQ()
 unsigned long long LibRSA::findD()
 {
     unsigned long long d, exp1, exp3, mod1, mod3, totient1, totient3, q;
-    //int iter;
-    //move over as in video
-    //uses extended Euclidean 
+    //based on sample code based on https://www.youtube.com/watch?v=6KmhCKxFWOs
+    //uses form of extended Euclidean 
     bool flip_needed;
     exp1 = 1;
     exp3 = e; 
     mod1 = 0;
     mod3 = phiN();
-    ///iter = 1;
     flip_needed = false;
     while (mod3 != 0)
     {
@@ -57,6 +55,7 @@ unsigned long long LibRSA::findD()
 }
 
 //base = message, exponent = e or d and mod = N
+//based on example of exponential squaring
 unsigned long long LibRSA::changeMsg(unsigned long long base, unsigned long long exponent, unsigned long long mod)
 {
     base %= mod;
@@ -81,15 +80,6 @@ unsigned long long LibRSA::chooseMsg(unsigned long long m, char c)
         return (-1); //error case
 }
 
-/*unsigned long long LibRSA::chooseMsg(unsigned long long m, char c)
-{
-    if (c == 'e')
-        return changeMsg(m, e, findN());
-    else if (c == 'd')
-        return changeMsg(m, findD(), findN());
-    else
-        return (-1); //error case
-}*/
 
 void LibRSA::chooseE() {
 	e = arrE[pickIndex()];
